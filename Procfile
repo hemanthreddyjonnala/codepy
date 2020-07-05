@@ -1,0 +1,1 @@
+web: gunicorn agrofarming.wsgi --timeout 3000 --log-file -

@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h1>This is a todo page</h1>
+    <ol>
+    {% for todo in todos %}
+        <li>
+            <form action = '/todo/deleteOrUpdateTodo/{{todo.id}}/' style = "display: inline;"  method="POST" enctype = "multipart/form-data">
+                {% csrf_token %}
+                <input type = "submit" name="Delete" value="Delete"/>
+                <input type = "submit" name="Update" value="Update"/>
+                <textarea name="todo_text_content" cols="50" rows="1">{{ todo.content }}</textarea>
+            </form>
+
+        </li>
+    {% endfor %}
+    </ol>
+    <form action = '/todo/addTodo/', method="POST" enctype = "multipart/form-data">
+        {% csrf_token %}
+        <input type  ="text" name="content"/>
+        <input type = "submit" value="Add"/>
+    </form>
+{% endblock content %}
