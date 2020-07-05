@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qpjsh2&3b3k78(_06x%vkv-kl4napo(5l7m448nsah&15%(m0c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['hjonnala.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['hjonnala.pythonanywhere.com', 'codepy.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
